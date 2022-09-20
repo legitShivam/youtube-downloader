@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}
+    Home
+{% endblock title %}
+{% block home_active %}
+    active
+{% endblock home_active %}
+
+{% block content %}
+<center>
+<div class="form__group field">
+    <form method='POST'>
+    {{ form.link(class="form__field", type='text', id='link') }}
+    <label for="link" class="form__label">Paste link</label>
+    {{ form.download(class="btn btn-primary", type="submit", value="Download") }}
+</form>
+</div>
+
+</center>
+{% endblock content %}
